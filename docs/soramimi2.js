@@ -79,10 +79,10 @@ function webspeech_recognition_loop(){
     for( var i = event.resultIndex; i < results.length; i++ ){
       var text = results[i][0].transcript;
       if( results[i].isFinal ){
-        $('#result_text').html( '<div class="balloon-r">' + text + '</div>' );
+        $('#result_text').append( '<div class="balloon-r">' + text + '</div>' );
         //. speechText( text );
       }else{
-        $('#result_text').html( '<div class="balloon-0">' + text + '</div>' );
+        //$('#result_text').html( '<div class="balloon-0">' + text + '</div>' );
         flag_speech = 1;
       }
     }
